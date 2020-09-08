@@ -1,0 +1,567 @@
+<style>
+
+.phb{
+    width : 210mm;
+    height : 297mm;
+    padding-top: 7mm;
+    padding-bottom: 7mm;
+    padding-left: 8mm;
+    padding-right: 8mm;
+    column-gap: 8mm;
+}
+
+/* Background */
+.phb{ background-image: url('https://rjbprime.github.io/homebrew-content-ttrpg/aigr/imgs/sotdl-background-small.jpg');
+  background-size: 212mm 299mm;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/** Import Fonts **/
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+English');
+@import url('https://fonts.googleapis.com/css?family=Uncial+Antiqua');
+/** Defining fonts **/
+@font-face {
+	font-family: 'First Order';
+	src: url('https://groumy.github.io/homebrewery-sotdl/fonts/firstv2.ttf')
+}
+@font-face {
+	font-family: 'GothamBold';
+	src: url('https://groumy.github.io/homebrewery-sotdl/fonts/GothamBold%20Regular.otf')
+}
+@font-face {
+	font-family: 'GothamBook';
+	src: url('https://groumy.github.io/homebrewery-sotdl/fonts/GothamBook%20Regular.otf')
+}
+@font-face {
+	font-family: 'JSL Ancient';
+	src: url('https://groumy.github.io/homebrewery-sotdl/fonts/jancieni.ttf')
+}
+@font-face {
+	font-family: 'Poison Hope';
+	src: url('https://groumy.github.io/homebrewery-sotdl/fonts/PoisonHope-Regular.otf')
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&subset=latin-ext");
+
+:root {
+  --main-color:           #1690A8;
+  --main-color-dark:      #0F6475;
+  --main-color-light:     #5BB1C2;
+  --main-color-lighter:   #D0E8ED;
+  --main-color-lightest:  #F6FDFE;
+
+  --main-color-stripe1:   #fbfbfb;
+  --main-color-stripe2:   #f5f5f5;
+}
+
+.phb {
+    font-family: 'Montserrat';
+    font-size: 7pt;
+    letter-spacing: -0.3pt;
+    color: #000;
+}
+
+.phb table td + td { border-left:2px solid #1690A8; }
+
+.smaller {
+    /*background: #fff;*/
+    font-family: 'Montserrat';
+    font-size: 5pt;
+    letter-spacing: -0.3pt;
+    color: #000;
+}
+
+.phb table { font-family: 'Montserrat'; font-size: 0.3cm; }
+
+.phb .descriptive { font-family: 'Montserrat'; font-size: 0.3cm; }
+.phb .descriptive p { font-family: 'Montserrat'; font-size: 0.3cm; }
+.phb .descriptive em { font-family: 'Montserrat'; }
+.phb .descriptive strong { font-family: 'Montserrat'; }
+
+.phb blockquote { font-family: 'Montserrat'; font-size: 0.3cm; }
+.phb blockquote p { font-family: 'Montserrat'; font-size: 0.3cm; }
+.phb blockquote em { font-family: 'Montserrat'; }
+.phb blockquote strong { font-family: 'Montserrat'; }
+.phb .spellList { font-family: 'Montserrat'; font-size: 0.3cm; }
+.phb .spellList ul { font-family: 'Montserrat'; font-size: 0.3cm; }
+
+.phb hr+section blockquote h3 {font-family: 'Montserrat'; }
+
+ 
+.phb h1, .phb h2, .phb h3, .phb h4, .phb h5, .phb h6 { font-family: 'Montserrat'; text-transform: uppercase; color: #000; }
+.phb h1 {font-size:180%;margin-top:-2mm;}
+.phb h2 {font-size:145%;color: var(--main-color-dark);}
+.phb h3 {font-size:125%;}
+.phb h4 {font-size:110%;}
+.phb h5 {font-size:105%;}
+.phb h6 {font-size:100%;}
+.phb h7 {font-size:105%;}
+.phb h3 { border-bottom-color: var(--main-color); }
+.phb h5 { color: var(--main-color); }
+.phb h6 { font-weight: bold; margin-bottom: 0.2em; }
+
+.phb h1+p::first-letter {
+    float: left;
+    font-family: 'Montserrat';
+    font-weight: 850;
+    font-size: 4em;
+    color: #000;
+    text-shadow: 3px 3px var(--main-color-light);
+    line-height: .8em;
+    letter-spacing: 0.05em;
+}
+
+.phb .back-cover-header { color: var(--main-color); line-height: 0.8; }
+.phb .back-cover-text a, .phb .back-cover-close a { color: var(--main-color); }
+.phb .back-cover-logo:after {
+    position: absolute;
+    content: "";
+    background: var(--main-color);
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: darken;
+}
+
+.phb a { color: var(--main-color-dark); }
+.phb strong { letter-spacing: inherit; }
+
+.phb table thead tr th {
+    text-transform: uppercase;
+    color: var(--main-color-dark);
+    border-bottom: 2px solid var(--main-color);
+    font-size: 85%;
+}
+.phb table tbody tr:nth-child(odd) {
+   background: var(--main-color-stripe1);
+}
+.phb table tbody tr:nth-child(even) {
+   background: var(--main-color-stripe2);
+}
+
+.phb blockquote, .phb .descriptive { 
+    border: 2px solid #000;
+    border-image: none;
+    border-image-width: 0px;
+}
+.phb blockquote {
+    background: rgba(119, 179, 36, 0.1);
+    border-color: rgb(119, 179, 36);
+    margin: 0 -0.7em 1em;
+    padding: 1px 0.7em;
+    border-width: 3px 0px 3px 0px;
+    box-shadow: none;
+}
+.phb .descriptive {
+    display: block;
+    background: rgba(115, 81, 69, 0.1);
+    border-color: rgb(115, 81, 69);
+    margin: 0 -1.25em 1em;
+    padding: 1px 1em;
+    border-width: 0px 3px 0px 3px;
+}
+
+.phb blockquote p, .phb blockquote ul, 
+.phb .descriptive p, .phb .descriptive ul {
+    line-height: 0.9em;
+}
+.phb blockquote h5, 
+.phb .descriptive h5 {
+    margin-top: 10.5px;
+}
+
+.phb .classTable h5, 
+.phb blockquote h5, 
+.phb .descriptive h5 {
+    color: #000;
+}
+blockquote p:last-child, blockquote ul:last-child, blockquote ol:last-child, 
+.descriptive p:last-child, .descriptive ul:last-child, .descriptive ol:last-child {
+    margin-bottom: 10.5px;
+}
+
+.phb .classTable { 
+    border: 3px solid var(--main-color);
+    margin: 0 -1em 1.5em;
+    padding: 0 .5em;
+    border-image: -webkit-linear-gradient(135deg, var(--main-color) 0%, var(--main-color-lightest) 50%, var(--main-color) 100%) 1;
+    /*background: #fff;*/
+    position: relative;
+}
+
+.phb .classTable:before, .phb .classTable:after {
+    content: "";
+    border: 3px solid var(--main-color);
+    position: absolute;
+    z-index: -1;
+    display: inline-block;
+    padding: 8px;
+}
+.phb .classTable:before { top: -9px; left: -9px; }
+.phb .classTable:after {bottom: -9px; right: -9px; }
+
+.phb .footnote, .phb .pageNumber {
+    font-family: 'Montserrat';
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--main-color);
+    bottom: 0.5cm;
+    font-size: 0.28cm;
+    line-height: 0.6cm;
+    padding: 0 1em;
+}
+.phb .footnote { 
+    width: auto;
+    right: initial;
+}
+.phb:nth-of-type(odd) .footnote { right: 80px; }
+.phb:nth-of-type(even) .footnote { left: 80px; }
+
+.phb:after { 
+    /*background-image: none; */
+    background-color: var(--main-color-lightest);
+    height: 0.6cm;
+    z-index: -5;
+    bottom: 0.5cm;
+}
+.phb hr+section blockquote {
+    padding: 1.3em 0.75em 0.5em;
+    border-image: none;
+    border-width: 6px 0px 3px;
+    border-color: hsl(45, 82%, 60%);
+    background: hsl(45, 82%, 94%);
+    /*background-image: none;*/
+    position: relative;
+    overflow: visible;
+}
+
+.phb hr+section blockquote:before, .phb hr+section blockquote:after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    content: "";
+    border: 0px solid hsl(45, 82%, 60%);
+}
+.phb hr+section blockquote:before {
+    top: -6px;
+    height: 12px;
+    border-width: 0 6px 0;
+}
+.phb hr+section blockquote:after {
+    bottom: -3px;
+    height: 8px;
+    border-width: 0 3px 0;
+}
+
+.phb hr+section blockquote ul strong {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: .3cm;
+}
+.phb hr+section blockquote hr+ul strong { color: hsl(358, 82%, 30%); }
+.phb hr+section blockquote hr+ul { color: hsl(358, 82%, 15%); }
+.phb hr+section blockquote hr {
+    background: hsl(45, 60%, 75%);
+    height: 2px;
+    margin: 6px 0;
+}
+.phb hr+section blockquote hr+table { padding-top: 5px; }
+.phb hr+section blockquote table th { color: hsl(358, 82%, 30%); font-size: 100%; padding-bottom: 0; border-bottom: none; }
+.phb hr+section blockquote h3 { font-family: 'Montserrat'; font-weight: 900; border-bottom: none; }
+.phb hr+section blockquote strong { font-weight: bold; }
+
+.phb .partpage, .phb .partpage-dmg { background: none; }
+.phb .partpage h1, .phb .partpage-dmg h1 {
+    font-family: "Montserrat";
+    font-size: 64pt;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin: 9em 0 0;
+    background: #000;
+    /*color: #fff;*/
+    padding: 12px 0 0;
+}
+
+.phb .partpage h5, .phb .partpage-dmg h5 {
+    font-family: "Montserrat";
+    font-size: 24pt;
+    background: #000;
+    color: var(--main-color);
+    margin: 0;
+    padding: 0 0 16px;
+}
+.phb .partpage-dmg h1, .phb .partpage-dmg h5 { background: var(--main-color); }
+.phb .partpage-dmg h5 { color: #000; }
+
+.phb .back-cover-diamond { height: 0; left: 2.3cm; }
+.phb .back-cover-diamond:before {
+    content: "";
+    display: inline-block;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    border-width: 8px 132px 8px 8px;
+    border-color: transparent var(--main-color) transparent transparent;
+}
+.phb .back-cover-diamond:after {
+    content: "";
+    display: inline-block;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    border-width: 8px 8px 8px 132px;
+    border-color: transparent transparent transparent var(--main-color);
+}
+
+.phb .cover-header { font-family: "Montserrat"; font-weight: 900; text-transform: uppercase; top: 70px; }
+.phb .cover-footer { font-family: "Montserrat"; font-weight: 900; text-transform: uppercase; }
+.phb .cover-diamond { height: 0px; left: 208px; top: 160px;}
+.phb .cover-diamond:before {
+    content: "";
+    display: inline-block;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    border-width: 8px 192px 8px 8px;
+    border-color: transparent var(--main-color) transparent transparent;
+}
+.phb .cover-diamond:after {
+    content: "";
+    display: inline-block;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    border-width: 8px 8px 8px 192px;
+    border-color: transparent transparent transparent var(--main-color);
+}
+.phb .cover-splotch { filter: hue-rotate(188deg) saturate(0.81) brightness(1.27); }
+
+/*Filter styles*/
+.saturate { filter: saturate(3); }
+.grayscale { filter: grayscale(100%); }
+.contrast { filter: contrast(160%); }
+.brightness { filter: brightness(0.25); }
+.blur { filter: blur(3px); }
+.invert { filter: invert(100%); }
+.sepia { filter: sepia(100%); }
+.huerotate { filter: hue-rotate(180deg); }
+.rss.opacity { filter: opacity(50%); }
+
+.phb:after {
+  background: none;
+  background-image: none;
+  content:"";
+}
+
+.toc a {
+  color: inherit !important;
+}
+
+.toc li span:nth-child(2){
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap; 
+  display: block;
+}
+
+.toc li span:nth-child(2):after{
+  font-family    : BookSanity;
+  font-size  	 : 6.5pt;
+  font-weight    : normal;
+  color    	     : black;
+  content:
+   " ........................................"
+   "........................................."
+   "........................................."
+   "........................................."
+   "........................................."; 
+}
+
+.toc li span:first-child{
+  float: right;
+  font-family    : BookSanity;
+  font-size  	 : 6.5pt;
+  font-weight    : normal;
+  color    	     : black;
+  margin-left    : 1px;
+}
+
+.toc li h3 span:nth-child(2):after{
+  	content: " ";            
+}
+
+.toc li h3 {
+  margin-bottom: 4px !important;    
+  margin-top: 8px !important;
+  line-height: initial !important;
+  font-size  	 : 8pt;
+}
+
+
+.toc li h4 {
+  margin-bottom: 4px !important;    
+  margin-top: 8px !important;
+  line-height: initial !important;
+  font-size  	 : 6.5pt;
+}
+
+.toc li h3 span:first-child{
+  	line-height: 1.7em !important;
+  	font-size  	 : 8pt;
+}
+
+.toc ul ul {
+  	margin-left: 10px !important;    
+}
+
+.toc>ul>li {
+  margin-bottom: initial !important;	
+}
+  
+/* Background Pg.1 */
+.phb:first-child{ background-image: url('https://rjbprime.github.io/homebrew-content-ttrpg/aigr/imgs/covers/coverpage.jpg');
+  background-size: 211mm 299mm;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Background Pg.Last */
+.phb:last-child{ background-image: url('https://rjbprime.github.io/homebrew-content-ttrpg/aigr/imgs/covers/rearpage.jpg');
+  background-size: 216mm 305mm;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Map UL */
+.phb:nth-last-child(5){ background-image: url('https://rjbprime.github.io/homebrew-content-ttrpg/aigr/imgs/maps/UL.jpg');
+  background-size: 210mm 297mm;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Map UR */
+.phb:nth-last-child(4){ background-image: url('https://rjbprime.github.io/homebrew-content-ttrpg/aigr/imgs/maps/UR.jpg');
+  background-size: 210mm 297mm;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Map LL */
+.phb:nth-last-child(3){ background-image: url('https://rjbprime.github.io/homebrew-content-ttrpg/aigr/imgs/maps/LL.jpg');
+  background-size: 210mm 297mm;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Map LR */
+.phb:nth-last-child(2){ background-image: url('https://rjbprime.github.io/homebrew-content-ttrpg/aigr/imgs/maps/LR.jpg');
+  background-size: 210mm 297mm;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.phb#p1 h1{
+  font-family: "First Order";
+	font-size: 380%;
+	text-align: center;
+	text-shadow: 0px 0px 5px black;
+	color:white;
+	text-transform: uppercase;
+	background-image: url('https://rjbprime.github.io/homebrew-content-ttrpg/aigr/imgs/h1.banner-large.jpg');
+	background-size: 100% 102.5%;
+	padding-top: 0.45em;
+	padding-bottom : 25px;
+	padding-left : 10mm;
+	padding-right : 10mm;
+	margin-left : -100mm;
+	margin-right : -100mm;
+	margin-top : -1mm;
+	-webkit-font-smoothing: antialiased;
+  filter: hue-rotate(188deg) saturate(0.81) brightness(1.27);
+}
+
+.phb#p1 h2{
+  font-family: "First Order";
+	font-size: 230%;
+	text-align: center;
+	text-shadow: 0px 0px 5px black;
+	color:white;
+	text-transform: uppercase;
+	background-image: url('https://rjbprime.github.io/homebrew-content-ttrpg/aigr/imgs/h1.banner-large.jpg');
+	background-size: 100% 102.5%;
+	padding-top: 0.45em;
+	padding-bottom : 15px;
+	padding-left : 10mm;
+	padding-right : 10mm;
+	margin-left : -100mm;
+	margin-right : -100mm;
+	margin-top : -1mm;
+	-webkit-font-smoothing: antialiased;
+  filter: hue-rotate(188deg) saturate(0.81) brightness(1.27);
+}
+
+.phb:nth-child(n+2) h1{
+  font-family: "First Order";
+	font-size: 200%;
+	text-align: center;
+	text-shadow: 0px 0px 5px black;
+	color:white;
+	text-transform: uppercase;
+	background-image: url('https://rjbprime.github.io/homebrew-content-ttrpg/aigr/imgs/h1.banner-large.jpg');
+	background-size: 100% 100%;
+	padding-top: 1.6mm;
+	padding-bottom : 1.6mm;
+	/*padding-left : 10mm;
+	padding-right : 10mm;*/
+	margin-left : -3.5mm;
+	margin-right : -3mm;
+	margin-top : -3mm;
+	-webkit-font-smoothing: antialiased;
+  filter: hue-rotate(188deg) saturate(0.81) brightness(1.27);
+}
+
+.phb:last-child h1{
+  font-family: "First Order";
+	font-size: 250%;
+	text-align: center;
+	text-shadow: 0px 0px 5px black;
+	color:white;
+	text-transform: uppercase;
+	background-image: url('https://rjbprime.github.io/homebrew-content-ttrpg/aigr/imgs/h1.banner-large.jpg');
+	background-size: 105% 105%;
+	padding-top: 1em;
+	padding-bottom : 25px;
+	padding-left : 10mm;
+	padding-right : 10mm;
+	margin-left : -100mm;
+	margin-right : -100mm;
+	margin-top : -1mm;
+	-webkit-font-smoothing: antialiased;
+  filter: hue-rotate(188deg) saturate(0.81) brightness(1.27);
+}
+
+.phb#p2 h1, .phb#p3 h1, .phb#p4 h1 {
+    font-size:16pt;
+    margin-bottom:0mm;
+}
+
+.phb#p2 h3, .phb#p3 h3, .phb#p4 h3 {
+  margin-top:-4 mm;
+}
+
+.phb:nth-child(n+2) h2 {
+  font-size: 200%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.phb#p21 table th:nth-of-type(1),th:nth-of-type(4),th:nth-of-type(7),{
+  width:5%;
+}
+
+</style>
